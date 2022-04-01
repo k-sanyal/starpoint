@@ -32,12 +32,14 @@
 
 <script>
 	
-	var map = L.map('map', { attributionControl: false}).setView([0, 0], 3);
+	var map = L.map('map', { attributionControl: false, zoomControl: false}).setView([0, 0], 3);
 	L.tileLayer('mapfinal/{z}/{x}/{y}.png', {
 		minZoom: 1,
 		maxZoom: 4,
 		continuousWorld: false,
 		noWrap: true,
 	}).addTo(map);
+	
+	new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
 
 </script>
