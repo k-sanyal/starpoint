@@ -40,6 +40,10 @@
 		noWrap: true,
 	}).addTo(map);
 	
-	new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
+	new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
+	var marker = L.marker([46,-65], {
+	title: "Солнце",
+	opacity: 0.0,
+	}).addTo(map);
 
 </script>
