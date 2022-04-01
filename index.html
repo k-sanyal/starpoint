@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru" style="height: 100%; margin: 0;">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starpoint Page</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   	<link rel="stylesheet" href="content.css" type="text/css">
+
+
+   	<style>
+   		#map {
+   			width: 100%;
+   			height: 100%;
+   			background: black;
+   		}
+   	</style>
+   	
+</head>
+<body style="height: 100%; width: 100%; margin: 0; background: #000000;">
+	
+	<div id="container"></div>
+	<div id="map"></div>
+
+</body>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+<script>
+	
+	var map = L.map('map', { attributionControl: false}).setView([0, 0], 3);
+	L.tileLayer('mapfinal/{z}/{x}/{y}.png', {
+		minZoom: 1,
+		maxZoom: 5,
+		continuousWorld: false,
+		noWrap: true,
+	}).addTo(map);
+
+</script>
